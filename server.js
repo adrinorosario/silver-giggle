@@ -2,11 +2,7 @@ import express from "express";
 import axios from "axios"
 import bodyParser from "body-parser";
 import pg from "pg";
-import dotenv from "dotenv";
 
-dotenv.config();
-
-import itemsPool from './DBConfig.cjs';
 
 
 
