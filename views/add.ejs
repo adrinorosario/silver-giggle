@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head.ejs") %>
+<body>
+    <%- include("partials/navbar.ejs") %>
+
+    <% if(locals.error) {%>
+        <div class="alert alert-warning" role="alert">
+            A simple warning alert—check it out!
+          </div>
+    <% } %>
+
+    <div class="container-fluid">
+        <h1 class="display-4">Add a new book</h1>
+        <form action="/submit-book" method="post">
+            <div class="form-floating mb-3">
+                <input required type="text" class="form-control" id="floatingInput" placeholder="Ex. The Lord of the Rings" name="bookName">
+                <label for="floatingInput">Name of the Book</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Author Name" name="authorName">
+                <label for="floatingPassword">Author Name</label>
+            </div><br>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Ex. Fantasy" name="genre">
+                <label for="floatingInput">Genre</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input required  type="number" class="form-control" id="floatingInput" placeholder="Ex. Fantasy" name="rating">
+                <label for="floatingInput">Rating (ex. 1, 5, 10)</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Link to the amazon page of the book, etc." name="link">
+                <label for="floatingPassword">Link to the book</label>
+            </div><br>
+            <div class="form-floating">
+                <textarea required class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="notes"></textarea>
+                <label for="floatingTextarea">Notes on the book; Write as much as you want to.</label>
+              </div><br>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" action="/submit-book" method="post" type="submit">Submit</button>
+            </div>        
+        </form>
+    </div>
+
+    <%- include("partials/footer.ejs") %>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

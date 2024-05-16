@@ -1,0 +1,35 @@
+{
+  "name": "silver-giggle",
+  "version": "1.0.0",
+  "description": "A book cataloging website",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrinorosario/silver-giggle.git"
+  },
+  "author": "adrino rosario james",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrinorosario/silver-giggle/issues"
+  },
+  "homepage": "https://github.com/adrinorosario/silver-giggle#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "pg": "^8.11.5",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  }
+}
